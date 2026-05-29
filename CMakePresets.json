@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Kitware/CMake/refs/heads/master/Help/manual/presets/schema.json",
+  "version": 11,
+  "cmakeMinimumRequired": {
+    "major": 4,
+    "minor": 3,
+    "patch": 2
+  },
+
+  "configurePresets": [
+    {
+      "name": "Windows-Debug",
+      "displayName": "Windows Debug Preset Config",
+      "description": "Debug preset configuration for x86_64 Win-11 environments.",
+      "toolchainFile": "${sourceDir}/cmake/toolchains/Windows-Toolchain.cmake",
+      "binaryDir": "${sourceDir}/build",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-g -O0 -Wall -Wextra -Wpedantic",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+
+    {
+      "name": "Windows-Release",
+      "displayName": "Windows Release Preset Config",
+      "description": "Release preset configuration for x86_64 Win-11 environments.",
+      "toolchainFile": "${sourceDir}/cmake/toolchains/Windows-Toolchain.cmake",
+      "binaryDir": "${sourceDir}/build",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-O3 -Wall"
+      }
+    }
+  ],
+
+  "buildPresets": [
+    {
+      "name": "Windows-Debug-Build",
+      "displayName": "Windows 'Debug' Build Config",
+      "description": "Build preset configuration for x86_64 Win-11 environments.",
+      "configurePreset": "Windows-Debug",
+      "targets": ["all"],
+      "verbose": true,
+      "jobs": 12,
+      "cleanFirst": false,
+      "hidden": false
+    },
+    {
+      "name": "Windows-Release-Build",
+      "displayName": "Windows 'Release' Build Config",
+      "description": "Build preset configuration for x86_64 Win-11 environments.",
+      "configurePreset": "Windows-Release",
+      "targets": ["all"],
+      "verbose": true,
+      "jobs": 12,
+      "cleanFirst": true,
+      "hidden": false
+    }
+  ]
+}
