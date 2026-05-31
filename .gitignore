@@ -1,19 +1,41 @@
-CMakeLists.txt.user
+#--------------------------------------------
+# IGNORED DIRECTORIES
+#--------------------------------------------
+.cache/
+.temp/
+.vscode/
+build/*
+#
+#--------------------------------------------
+# Ignored Build Files
+#--------------------------------------------
 CMakeCache.txt
 CMakeFiles
-CMakeScripts
-Testing
-Makefile
 cmake_install.cmake
+CTestTestfile.cmake
 install_manifest.txt
 compile_commands.json
-CTestTestfile.cmake
-_deps
-CMakeUserPresets.json
-
-# CLion
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#cmake-build-*
+#
+#--------------------------------------------
+# Ignored Build File Types
+#--------------------------------------------
+*.lib
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.a
+#
+#--------------------------------------------------------------------------
+# Configuration Files
+#--------------------------------------------------------------------------
+# ".gitignore", ".clangd", ".clang-format",  and ".editorconfig" are in the
+# repository, but their contents should be static, so the files are ignored
+# to prevent accidental edits.
+.gitignore
+.gitattributes
+.editorconfig
+.clang-format
+.clang-tidy
+.clangd
