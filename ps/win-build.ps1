@@ -1,0 +1,1 @@
+﻿&cmake --build "build" --preset "Windows-Debug-Build" --config "Debug"
