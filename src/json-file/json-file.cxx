@@ -13,7 +13,7 @@ namespace JT
      * @param path The path to the file to be read.
      ***********************************************************/
     JsonFile::JsonFile(const std::string &path)
-     : JsonFile(Path(path)) {}
+      : JsonFile(Path(path)) {}
 
 
 
@@ -24,7 +24,7 @@ namespace JT
      * @param path The path to the file to be read.
      ***********************************************************/
     JsonFile::JsonFile(const char *path)
-     : JsonFile(Path(path)) {}
+      : JsonFile(Path(path)) {}
 
 
 
@@ -35,19 +35,19 @@ namespace JT
      * @param path The path to the file to be read.
      ***********************************************************/
     JsonFile::JsonFile(const Path &path)
-     : path(path),
-       buff(
-         [&]()
-         {
-             std::ifstream file(path, std::ios::binary);
+      : path(path),
+        buff(
+          [&]()
+          {
+              std::ifstream file(path, std::ios::binary);
 
-             if (!file) {
-                 throw std::runtime_error("Could not open file");
-             }
+              if (!file) {
+                  throw std::runtime_error("Could not open file");
+              }
 
-             return std::string(std::istreambuf_iterator<char>(file),
-               std::istreambuf_iterator<char>());
-         }()) {}
+              return std::string(std::istreambuf_iterator<char>(file),
+                std::istreambuf_iterator<char>());
+          }()) {}
 
 
 

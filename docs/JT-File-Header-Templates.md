@@ -46,14 +46,16 @@ at the top of each **`.cxx`** file, and each **`.hxx`** file.
 
 ---
 
-<br>
+<br><br>
 
-### CMAKE FILE: Header Comment
 
-- **File Extension: `.cmake`**
-- **Line Length: `65 CHARS`**
 
-  NOTE: _The File description should be formatted according to the amount of lines the description contains. If the description is less than two (2) lines use `# DESC: ""`, however; if the description is more three (3) or more lines use `# FILE DESCRIPTION:` and start the description on the next line._
+
+### CMAKE: Script & Module File Header
+- **File Type:** `.cmake`
+- **Line Length:** 65-chars
+
+**! PLEASE NOTE ! --** "This template is **NOT** for using with _`CMakeLists.txt`_  files, it is for CMake modules and scripts whose names are appended with the `.cmake` file extension and not the `.txt` file extension. If your looking for the _'CMakeLists.txt file documentation header'_ see the template below this one."
 
 ```
 #################################################################
@@ -87,11 +89,46 @@ at the top of each **`.cxx`** file, and each **`.hxx`** file.
 #   the multi-line description indents each line 2-spaces. Short
 #   descriptions use the `# DESC:` format instead."
 #################################################################
-
 ```
 
+---
 
-### CMAKE FUNCTION: Inline Doc Comment
+<br><br>
+
+
+
+
+### CMAKE: CMakeLists.txt
+- **File Type:** `CMakeLists.txt`
+- **Line Length:** 65-chars
+
+
+```
+##########################################################################
+#  PROJECT:
+#    * PROJ-NAME: "J-TOOL"
+#    * DESCRIPTION: "JSON AST Generator, Schema Validator, and Formatter"
+#
+#  THIS FILE :
+#    * FILE-NAME:   "include_base_dir_name/CMakeLists.txt"
+#    * AUTHOR(S):   "Name every programmer who has worked on this file"
+#    * DESCRIPTION: "Describe the file's purpose, and the code within it"
+#
+#  CONTACT INFO:
+#    * EMAIL:       "Ajay.Chambers@Outlook.com"
+#    * REPOSITORY:  "https://GitHub.com/AjayChambers/J-Tool"
+#    * ISSUES/BUGS: "https://GitHub.com/AjayChambers/J-Tool/issues"
+#==============================================================================
+```
+
+---
+
+<br><br>
+
+
+
+
+### CMAKE: Inline Function Documentation
   - ###### For file extensions: `.cmake`
   - ###### Header Line Length = 65-chars
 ```

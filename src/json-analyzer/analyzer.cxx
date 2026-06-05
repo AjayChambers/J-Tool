@@ -43,6 +43,7 @@ namespace JT
     void JsonAnalyzer::analyze() {
         Iterator iter = buffer.begin();
         Iterator end  = buffer.end();
+
         while (iter != end) {
             ++iter;
             std::cout << *iter;
