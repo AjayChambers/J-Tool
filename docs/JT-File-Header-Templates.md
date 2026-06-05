@@ -48,37 +48,59 @@ at the top of each **`.cxx`** file, and each **`.hxx`** file.
 
 <br>
 
-## CMake File Header Comment
-###### For file extensions: `.cmake`
+### CMAKE FILE: Header Comment
+
+- **File Extension: `.cmake`**
+- **Line Length: `65 CHARS`**
+
+  NOTE: _The File description should be formatted according to the amount of lines the description contains. If the description is less than two (2) lines use `# DESC: ""`, however; if the description is more three (3) or more lines use `# FILE DESCRIPTION:` and start the description on the next line._
 
 ```
-######################################################################
+#################################################################
+# J-TOOL: JSON Analyzer, Parser & Formatter
 #
-#  J-TOOL: JSON Analyzer, Parser & Formatter
-#  COPYRIGHT (C) 2026 ANDREW JAY CHAMBERS
+# Copyright (C) 2026 "ANDREW J CHAMBERS JR"
 #
-#    This program is free software: you can redistribute it and/or
-#    modify it under the terms of the GNU General Public License as
-#    published by the Free Software Foundation, either version 3 of
-#    the License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of
+# the License, or at your option) any later version.
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 #
-#    You should have received a copy of the GNU General Public
-#    License with this program. If you did not recieve a copy,
-#    see <https://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public
+# License along with this program. If you did not receive a copy
+# visit <"https://www.gnu.org/licenses/">
 #
-######################################################################
+#################################################################
 #
-#  FILENAME:     "This_Files_Name.(cxx|hxx)"
-#  DIRECTORY:    ""
-#  AUTHOR:       "Andrew Chambers [Ajay.Chambers@outlook.com]"
-#  REPOSITORY:   "https://GitHub.com/GitHub_UID/{Project_Name}
-#  LICENSE:      "GNU General Public License v3.0 (GPL v3.0)"
-#  DESCRIPTION:  "Insert a description for this file here..."
-#
-######################################################################
+# FILE: ""
+# LIC:  ""
+# AUTH: ""
+# REPO: ""
+# DESC: ""
+# FILE DESCRIPTION:
+#   "Long descriptions are formatted like you see here. Make sure
+#   the multi-line description indents each line 2-spaces. Short
+#   descriptions use the `# DESC:` format instead."
+#################################################################
+
+```
+
+
+### CMAKE FUNCTION: Inline Doc Comment
+  - ###### For file extensions: `.cmake`
+  - ###### Header Line Length = 65-chars
+```
+#################################################################
+# FUNCTION: ""
+# ARGUMENTS:
+#   * ""
+#   * ""
+#   * ""
+# DESCRIPTION: ""
+#################################################################
 ```
