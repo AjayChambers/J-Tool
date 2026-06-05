@@ -1,24 +1,19 @@
-#--------------------------------------------
-# IGNORED DIRECTORIES
-#--------------------------------------------
+#=================================================
+# DIRECTORIES
+#=================================================
+.vscode/*
+.trash/
 .cache/
 .temp/
-.vscode/
+.tmp/
+.log/
 build/*
-#
-#--------------------------------------------
-# Ignored Build Files
-#--------------------------------------------
-CMakeCache.txt
-CMakeFiles
-cmake_install.cmake
-CTestTestfile.cmake
-install_manifest.txt
-compile_commands.json
-#
-#--------------------------------------------
-# Ignored Build File Types
-#--------------------------------------------
+test/pseudo-data/*
+
+
+#=================================================
+# CLANG GENERATED BUILD ARTIFACTS
+#=================================================
 *.lib
 *.dll
 *.so
@@ -26,13 +21,31 @@ compile_commands.json
 *.o
 *.obj
 *.a
-#
-#--------------------------------------------------------------------------
+
+
+#=================================================
+# CMAKE GENERATED ARTIFACTS
+#=================================================
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+
+
+#=================================================
+# NINJA GENERATED ARTIFACTS
+#=================================================
+.ninja_deps
+.ninja_log
+.ninja_status
+build.ninja
+
+
+#=================================================
 # Configuration Files
-#--------------------------------------------------------------------------
-# ".gitignore", ".clangd", ".clang-format",  and ".editorconfig" are in the
-# repository, but their contents should be static, so the files are ignored
-# to prevent accidental edits.
+#=================================================
 .gitignore
 .gitattributes
 .editorconfig
