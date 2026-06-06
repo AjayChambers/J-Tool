@@ -42,8 +42,8 @@
 #   binaries and libraries."
 #################################################################
 function(add_unit_test  TARGET_NAME  FILENAME  BINARY_NAME  BIN_DIR)
-  string(PREPEND BINARY_NAME "__JT-TEST__")
-  add_executable(${TARGET_NAME} "${JT_TEST_DIR}/${FILENAME}")
+  string(PREPEND BINARY_NAME "__TEST__${BINARY_NAME}")
+  add_executable(${TARGET_NAME} "${TEST_DIR_}/${FILENAME}")
   add_test(NAME ${TARGET_NAME} COMMAND ${BINARY_NAME})
   gtest_discover_tests(${TARGET_NAME})
   set_target_properties(
