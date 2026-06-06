@@ -32,27 +32,44 @@
 #
 ######################################################################
 CMAKE_MINIMUM_REQUIRED(VERSION 4.3.2)
+list(PREPEND CMAKE_MODULE_PATH
+    "cmake/scripts/cache-var-mod"
+    "cmake/scripts")
+
+include("CMakeGlobals.cmake")
+#----------------------------------------------------------------
+# "CMakeGlobals.cmake"
+# The CMake script included above contains a set of CMake global
+# variables that can be used in CMakeLists.txt files throughout
+# the entire J-Tool project.
+#
+#   AVAILABLE VARS:
+#     * PROJ_NAME_
+#     * PROJ_VER_
+#     * PROJ_DESC_
+#     * ROOT_DIR_
+#     * INCLUDE_DIR_
+#     * SOURCE_DIR_
+#     * BUILD_DIR_
+#     * RUNTIME_DIR_
+#     * ARCHIVE_DIR_
+#     * LIBRARY_DIR_
+#     * TEST_DIR_
+#     * TEST_RUNTIME_DIR_
+#     * MODULE_DIR_
+#
+#----------------------------------------------------------------
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-include("CMakeGlobals.cmake")
-
-list(PREPEND
-  CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/scripts")
-
-project(
-  "J-Tool"
-  VERSION ${JT_VERSION}
-  DESCRIPTION ${JT_DESCRIPTION}
+project("J-TOOL"
+  VERSION ${PROJ_VER_}
+  DESCRIPTION ${PROJ_DESC_}
   LANGUAGES CXX)
 
-include_directories(${JT_INCLUDE_DIR})
-
-add_subdirectory(src)
+include_directories(${INCLUDE_DIR_})
+add_subdirectory("src")
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-  # Inform CMake where the test modules are located
-  list(PREPEND
-    CMAKE_MODULE_PATH
-    "${CMAKE_SOURCE_DIR}/cmake/scripts/test-mod")
-  add_subdirectory(test) # Will build all J-Tool unit tests
+  list(PREPEND CMAKE_MODULE_PATH ${MODULE_DIR_}/test-mod)
+  add_subdirectory(test)
 endif()
