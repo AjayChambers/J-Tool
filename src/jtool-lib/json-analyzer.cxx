@@ -1,6 +1,5 @@
+#include "./include/json-analyzer.hxx"
 #include <iostream>
-#include <json-analyzer.hxx>
-
 
 namespace JT
 {
@@ -8,7 +7,7 @@ namespace JT
      *
      ************************************************************/
     JsonAnalyzer::JsonAnalyzer(JsonBuffer buff)
-     : buffer(std::string(buff.begin(), buff.end())) {}
+      : buffer(std::string(buff.begin(), buff.end())) {}
 
 
 
@@ -17,7 +16,7 @@ namespace JT
      *
      ************************************************************/
     JsonAnalyzer::JsonAnalyzer(const std::string &json)
-     : buffer(json) {}
+      : buffer(json) {}
 
 
 
@@ -26,7 +25,7 @@ namespace JT
      *
      ************************************************************/
     JsonAnalyzer::JsonAnalyzer(std::vector<char> &&json)
-     : buffer(std::move(json)) {}
+      : buffer(std::move(json)) {}
 
 
 

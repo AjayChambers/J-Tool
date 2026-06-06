@@ -1,7 +1,6 @@
 #pragma once
 #include <filesystem>
 #include <json-buffer.hxx>
-#include <vector>
 
 namespace fs = std::filesystem;
 

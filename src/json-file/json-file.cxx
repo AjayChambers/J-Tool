@@ -1,7 +1,6 @@
 #include <fstream>
 #include <json-file.hxx>
 
-
 using size_type = JT::JsonBuffer::size_type;
 using pointer   = JT::JsonBuffer::pointer;
 
