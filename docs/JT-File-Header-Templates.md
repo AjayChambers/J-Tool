@@ -104,21 +104,25 @@ at the top of each **`.cxx`** file, and each **`.hxx`** file.
 
 
 ```
-##########################################################################
-#  PROJECT:
-#    * PROJ-NAME: "J-TOOL"
-#    * DESCRIPTION: "JSON AST Generator, Schema Validator, and Formatter"
+#================================================================
+# J-TOOL, JSON Analyzer, Parser & Formatter
+# Copyright (C) 2026 Andrew Jay Chambers
 #
-#  THIS FILE :
-#    * FILE-NAME:   "include_base_dir_name/CMakeLists.txt"
-#    * AUTHOR(S):   "Name every programmer who has worked on this file"
-#    * DESCRIPTION: "Describe the file's purpose, and the code within it"
+#   Licensed under the GNU General Public License v3.0. To view
+#   a copy of the license (@see "LICENSE.md") in this project's
+#   root directory or visit <"https://www.gnu.org/licenses/">.
 #
-#  CONTACT INFO:
-#    * EMAIL:       "Ajay.Chambers@Outlook.com"
-#    * REPOSITORY:  "https://GitHub.com/AjayChambers/J-Tool"
-#    * ISSUES/BUGS: "https://GitHub.com/AjayChambers/J-Tool/issues"
-#==============================================================================
+# REPOSITORY: "https://GitHub.com/AjayChambers/J-Tool"
+# ISSUE/BUG:  "https://GitHub.com/AjayChambers/J-Tool/issues"
+# CONTACT:    "Ajay.Chambers@Outlook.com"
+#================================================================
+# FILE'S META DETAILS
+#   FILENAME:  "base_dir/filename.file_ext"
+#   AUTHOR(s): "List names of all contributors"
+#   FILE DESC:
+#     "The description can start here, or if its more than one
+#     line in length it can start on this line instead"
+#================================================================
 ```
 
 ---
